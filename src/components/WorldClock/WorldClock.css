@@ -1,0 +1,112 @@
+.world-clock-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.world-clock-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.toggle-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #45a049;
+}
+
+.toggle-button:focus {
+  outline: 3px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+.clocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.clock-item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.clock-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Digital Clock Styles */
+.digital-clock {
+  text-align: center;
+}
+
+.digital-clock h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.digital-time {
+  font-family: 'Courier New', monospace;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2196F3;
+  margin: 10px 0;
+  letter-spacing: 2px;
+}
+
+.timezone {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Analog Clock Styles */
+.analog-clock {
+  text-align: center;
+}
+
+.analog-clock h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.analog-clock svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .clocks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .world-clock-container {
+    padding: 15px;
+  }
+  
+  .digital-time {
+    font-size: 28px;
+  }
+}
